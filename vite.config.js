@@ -13,10 +13,11 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api': {
-        target: 'http://localhost:5000',
-        changeOrigin: true,
-      },
+        '/api': {
+          target: 'https://tool-management-backend.onrender.com',
+          changeOrigin: true,
+          secure: false,
+        },
     },
   },
 })
